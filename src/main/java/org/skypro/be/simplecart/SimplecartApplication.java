@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SimplecartApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SimplecartApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SimplecartApplication.class, args);
+    }
 
 }
