@@ -2,7 +2,6 @@ package org.skypro.be.simplecart.controller;
 
 
 import org.skypro.be.simplecart.service.CartService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,8 +14,11 @@ import java.util.Map;
 @RequestMapping("/order")
 public class CartController {
 
-    @Autowired
-    private CartService cartService;
+    private final CartService cartService;
+
+    public CartController(CartService cartService) {
+        this.cartService = cartService;
+    }
 
 
     @GetMapping("/add")
